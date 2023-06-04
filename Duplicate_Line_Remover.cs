@@ -1,14 +1,8 @@
-using System;
-using System.IO;
+string inputFilePath = args[0];
+string outputFilePath = args[1];
 
-class Program
+if (!File.Exists(inputFilePath))
 {
-    static void Main(string[] args)
-    {
-        if (args.Length != 2)
-        {
-            Console.WriteLine("Usage: DuplicateLineRemover <inputfile> <outputfile>");
-            return;
-        }
-    }
+    Console.WriteLine("Input file does not exist.");
+    return;
 }
